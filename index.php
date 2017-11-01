@@ -60,22 +60,22 @@
 	</section>
 	<ul class="social">
 			<li class="fb">
-				<a href="">
+				<a href="https://www.facebook.com/luxurypropertyphotos/">
 					<i class="fa fa-facebook"></i>
 				</a>
 			</li>
 			<li class="yt">
-				<a href="">
+				<a href="https://www.youtube.com/channel/UCxjPmBFfLNuTHM9bGABY_0g">
 					<i class="fa fa-youtube"></i>
 				</a>
 			</li>
 			<li class="ig">
-				<a href="">
+				<a href="https://www.instagram.com/luxurypropertyimages">
 					<i class="fa fa-instagram"></i>
 				</a>
 			</li>
 			<li class="fk">
-				<a href="">
+				<a href="https://www.flickr.com/people/153207331@N04/">
 					<i class="fa fa-flickr"></i>
 				</a>
 			</li>
