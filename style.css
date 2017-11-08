@@ -283,10 +283,16 @@ i {
 		min-height: 600px;
 	}
 	#text {
-		top: 25%;
+		top: 30%;
+	}
+	#text h1 {
+		font-size: 1.4rem;
+	}
+	#text p {
+		padding: .2rem;
 	}
 	.social {
-		bottom: 5rem;
+		bottom: 1rem;
 	}
 	#menu-button {
 		display: block;
