@@ -1,9 +1,9 @@
 
 body {
 	width: 100%;
+	height: 100%;
 	background-color: #000;
 	color: #fff;
-	
 	margin: 0 auto;
 }
 h1 {
@@ -34,7 +34,7 @@ h1::after {
 	position: absolute;
 	right: 1rem;
 	margin-bottom: 0;
-	bottom: 0;
+	bottom: 1rem;
 }
 .info li {
 	display: inline-block;
@@ -42,6 +42,19 @@ h1::after {
 	font-weight: 200;
 	position: relative;
 	width: 60px;
+}
+.info li span {
+	opacity: 0;
+	transition: all .5s;
+	position: absolute;
+	left: -50%;
+	width: 200%;
+	text-align: center;
+	font-size: .8rem;
+}
+
+.info li:hover span {
+	opacity: 1
 }
 .info li i {
 	position: absolute;
@@ -59,7 +72,7 @@ h1::after {
 .header-wrap {
 	width: 100%;
 	background-color: rgba(0,0,0, .7);
-	position: fixed;
+
 	top: 0;
 	z-index: 3;
 	height: 80px;
@@ -82,73 +95,56 @@ header {
 .logo img {
 	height: 100%;
 }
+.carousel {
+	width: 100%;
+	height: 500px;
+	position: relative;
+}
 .banner {
 	transition: background-position 1s;
 	width: 100%;
-	height: 100%;
-	min-height: 1000px;
+	height: 500px;
 	position: absolute;
-	display: block;
-	background-image: url('banner3.jpg');
+	background-size: cover;
+	background-position: center;
+	background-image: url('_img/8.jpg');
+}
+
+.inner {
+	width: 100%;
+	height: 500px;
+	position: absolute;
+	background-image: url('_img/7.jpg');
 	background-size: cover;
 	background-position: center;
 }
 
-#text {
-	transition: all .5s;
-	z-index: 3;
-	position: relative;
-	top: 45%;
-	font-family: serif;
-	font-weight: thin;
-	font-variant: small-caps;
-	display: block;
+.about {
+	width: 50%;
+	min-width: 350px;
 	margin: 0 auto;
-	text-align: center;
+}
+.col {
+	width: 45%;
+	max-width: 800px;
+	float: left;
+	margin: 1rem 0;
+}
+
+.col img {
 	width: 100%;
-	height: 300px;
-	background-color: rgba(0,0,0,.3);
+}
+.col:first-child {
+	margin-right: 5%;
+}
+.col:last-child {
+	margin-left: 5%;
 }
 
-#text #textSlides {
-	text-align: center;
-	padding: 0;
-	width: 100%;
-	max-width: 350px;
-	display: block;
-	margin: 0 auto;
-	list-style: none;
-	overflow: hidden;
-}
-
-#text ul li {
-position: absolute;
-display: none;
-font-size: 1.2rem;
-max-width: 350px;
-}
-#text ul li p {
-	font-size: 1rem;
-	font-family: serif;
-	line-height: 1.2rem;
-}
-
-#text ul li:first-child {
-	display: block;
-}
-#text ul li.active {
-	opacity: 1;
-	margin-left: 0;
-	transition: all .5s;
-}
 .social {
 	transition: all .5s;
 	z-index: 3;
 	display: block;
-	position: absolute;
-	bottom: 10rem;
-	left: 0;
-	right: 0;
 	margin: auto;
 	width: 300px;
 	padding: 0;
@@ -165,6 +161,17 @@ max-width: 350px;
 	margin-left: 20px;
 	transition: all .5s;
 }
+
+.social li span {
+	position: absolute;
+	opacity: 0;
+	font-size: .9rem;
+	transition: all .5s;
+	text-align: center;
+	width: 200%;
+	left: -50%;
+	bottom: -2rem;
+}
 .social li a {
 	display: block;
 	width: 100%;
@@ -173,6 +180,10 @@ max-width: 350px;
 .social li:first-child:hover{
 	transform: scale(1.5);
 	background-color: #444499;
+}
+.social li:hover span {
+	opacity: 1;
+	transform: scale(.6);
 }
 .social li:nth-child(2):hover{
 	transform: scale(1.5);
@@ -259,29 +270,71 @@ i {
 	font-family: serif;
 	font-weight: 300;
 }
+.connect {
+	display: block;
+	clear: both;
+}
+.copy {
+	width: 300px;
+	text-align: center;
+	margin: 1rem auto;
+}
+.copy a {
+	text-decoration: none;
+	color: #ddd;
+}
+.copy a:hover {
+	text-decoration: underline;
+}
 #cta {
 	width: 100px;
 	height: 30px;
 	border-radius: 5px;
 	background-color: #eeb03d;
 	line-height: 30px;
-	font-size: .9rem;
+	font-size: 20px;
 	color: #fff;
 	text-decoration: none;
+	text-align: center;
 	font-family: sans-serif;
-	font-variant: none;
+	font-variant: small-caps;
 	display: block;
 	margin: 0 auto;
+	position: relative;
+	transition: all .5s;
 }
+
 
 #cta:hover {
 	background-color: #dda02c;
 }
+
+h2 {
+	text-align: center;
+}
+footer {
+	position: relative;
+	margin: 2rem 0;
+}
+h3 {
+	text-align: center;
+}
+
 @media screen and (max-width: 767px) {
 	.banner {
-		background-position: 10% 100%;
-		min-height: 600px;
+		background-position: 10% 100%;	
 	}
+	.col {
+		display: block;
+		float: none;
+		width: 100%;
+	}
+	.col:first-child {
+		margin-right: 0;
+	}
+	.col:last-child {
+	margin-left: 0;
+}
 	#text {
 		top: 30%;
 	}
