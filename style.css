@@ -324,6 +324,11 @@ h3 {
 	.banner {
 		background-position: 10% 100%;	
 	}
+	.about {
+		min-width: 0;
+		width: 80%;
+	}
+	
 	.col {
 		display: block;
 		float: none;
